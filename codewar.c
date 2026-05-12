@@ -22,7 +22,7 @@ void limparBuffer() {
 
 // --- Função Principal ---
 int main() {
-    // Declaração correta do array de structs
+    // Declaração do array de structs
     struct Territorio mapa_mundi[TOTAL_TERRITORIOS];
 
     system("clear || cls"); // Limpa a tela no início
@@ -46,7 +46,6 @@ int main() {
         scanf("%d", &mapa_mundi[i].tropas);
         limparBuffer(); // Limpa o '\n' deixado pelo scanf
 
-        // Correção para remover o '\n' que o fgets deixa no final
         mapa_mundi[i].nome[strcspn(mapa_mundi[i].nome, "\n")] = '\0';
         mapa_mundi[i].cor[strcspn(mapa_mundi[i].cor, "\n")] = '\0';
     }
